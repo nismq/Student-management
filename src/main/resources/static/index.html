@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="code.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>Add student</h4>
+        <form name="addstudent" action="/addstudent" method="post" onsubmit="return validateStudentForm();">
+            <input type="text" name="fname" id="fname" placeholder="First name"/>
+            <input type="text" name="lname" id="lname" placeholder="Last name"/>
+            <input type="submit" value="Submit">
+            <output style="color: red; display:block; margin:10px" id="alertfieldstudent"></output>
+        </form>
+    </div>
+    <div>
+        <h4>Add course</h4>
+        <form name="addcourse" action="/addcourse" method="post" onsubmit="return validateCourseForm();">
+            <input type="text" name="courseName" id="courseName" placeholder="Course name"/>
+            <input type="text" name="teacher" id="teacher" placeholder="Teacher"/>
+            <input type="text" name="classroom" id="classroom" placeholder="Classroom"/>
+            <input type="submit" value="Submit">
+            <output style="color: red; display:block; margin:10px" id="alertfieldcourse"></output>
+        </form>
+    </div>
+    <div>
+        <h4>Add student to course</h4>
+        <p>If unvalid student id or course id is entered a blank page is diplayed</p>
+        <form name="addenrollment" action="/addenrollment" method="post" onsubmit="return validateEnrollmentForm();">
+            <input type="number" name="studentId" id="studentId" placeholder="Enter student id"/>
+            <input type="number" name="courseId" id="courseId" placeholder="Enter course id"/>
+            <input type="submit" value="Submit"/>
+            <output style="color: red; display:block; margin:10px" id="alertfieldenrollment"></output>
+        </form>
+    </div>
+    <div>
+        <h4>Get students by course or courses by student</h4>
+        <p>
+            Select "Get students" and enter course id to get students from that course. <br> 
+            Select "Get courses" and enter student id to get courses of that student.
+        </p>
+        <form id="getForm" action="/courses/{courseId}" method="get" onsubmit="return getForm();">
+            <select name="studentsOrCourse" id="studentOrCourse">
+                <option value="students">Get students</option>
+                <option value="courses">Get courses</option>
+            </select>
+            <input type="text" name="getId" id="getId" placeholder="Enter student or course id">
+            <input type="submit" value="submit">
+            <output style="color: red; display:block; margin:10px" id="alertfieldGetForm"></output>
+        </form>
+    </div>
+    <div>
+        <form action="/students" method="get" style="margin: 10px;">
+            <input type="submit" value="See students"/>
+        </form>
+    </div>
+    <div>
+        <form action="/courses" method="get" style="margin: 10px;">
+            <input type="submit" value="See courses"/>
+        </form>
+    </div>
+    <div>
+        <form action="/enrollments" method="get" style="margin: 10px;">
+            <input type="submit" value="See enrollments"/>
+        </form>
+    </div>
+</body>
+</html>

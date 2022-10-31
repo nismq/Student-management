@@ -1,0 +1,45 @@
+POST http://localhost:8080/addstudent HTTP/1.1
+Content-Type: application/json
+
+{
+    "fname": "Tauno",
+    "lname": "Testioppilas"
+}
+
+###
+POST http://localhost:8080/addstudent HTTP/1.1
+Content-Type: application/json
+
+{
+    "fname": "Teppo",
+    "lname": "Testi"
+}
+
+###
+POST http://localhost:8080/addstudent HTTP/1.1
+Content-Type: application/json
+
+{
+    "fname": "Ville",
+    "lname": "Virta"
+}
+
+###
+
+POST http://localhost:8080/addcourse HTTP/1.1
+Content-Type: application/json
+
+{
+    "teacher": "Ope Orava",
+    "courseName": "javakurssi",
+    "classroom": "5A303"
+}
+
+###
+POST http://localhost:8080/addenrollment HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentId": "4",
+    "courseId": "3"
+}

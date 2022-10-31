@@ -1,0 +1,6 @@
+Java,Ope Orava,5A303
+Cloudservices,Olli Opettaja,5A302
+Web-programming,Liisa Luokanohjaaja,5A300
+English,Tuuli Tuutori,5A301
+Math,Pekka,5A203
+Project,Kaisa,5A203
