@@ -1,6 +1,6 @@
-function validateEnrollmentForm(){   
+function validateEnrollmentForm(){
     var studentId = document.getElementById("studentId").value;
-    var courseId = document.getElementById("courseId").value
+    var courseId = document.getElementById("courseId").value;
     var alertfield = document.getElementById("alertfieldenrollment");
     if(courseId == null || courseId == "" || studentId == null || studentId == ""){
         alertfield.value = "Enter student id and course id!"
@@ -23,10 +23,10 @@ function validateCourseForm(){
 
 function validateStudentForm(){
     var fname = document.getElementById("fname").value;
-    var lname = document.getElementById("lname").value
+    var lname = document.getElementById("lname").value;
     var alertfield = document.getElementById("alertfieldstudent");
     if(fname == null || fname == "" || lname == null || lname == ""){
-        alertfield.value = "Enter first and last name to add student!"
+        alertfield.value = "Enter first and last name to add student!";
         return false;
     }
     return true;
@@ -37,7 +37,7 @@ function getForm(){
     var id = document.getElementById("getId").value;
     var alertfield = document.getElementById("alertfieldGetForm");
     if(id == "" || id == null){
-        alertfield.value = "Add id!"
+        alertfield.value = "Add id!";
         return false;
     }
     
